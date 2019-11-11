@@ -1,0 +1,19 @@
+{
+    "name": "james-ban/yii2-logstash",
+    "description": "yii2 logstash",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "niupeiyuan",
+            "email": "niupeiyuan@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Log\\": "src"
+        }
+    }
+}
