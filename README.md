@@ -32,15 +32,16 @@
     
   ?>
   ```
-```
-
   
+  
+  
+    
 
 ## Logstatsh配置文件
 
 - 将`yii2.conf`放置在`/etc/logstash/conf.d`下
+```
 
-  ```shell
   input {
     file {
       type => "prod"
@@ -49,8 +50,6 @@
       codec => "json"
     }
   }
-```
-
 
   output {
   	if [type] == "prod" {
@@ -64,7 +63,7 @@
              }
   	}
   }
-  ```
+```
 
 - 重启 logstatsh
 
@@ -73,5 +72,6 @@
   Usage:  {start|stop|force-stop|status|reload|restart|configtest}
   ```
 
-  ​
+  
+
 
