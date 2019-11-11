@@ -2,7 +2,13 @@
 
 ## Yii2配置
 
-- 将` LogStashFileTarget.php` 放置在 `app/libraries/logs`下
+- 安装
+
+  ```shell
+  composer require james-ban/yii2-logstash
+  ```
+
+
 
 - 修改 `app/config/web.php` 添加`LogstashFileTarget` 部分
 
@@ -14,7 +20,7 @@
               'targets' => [
                   ....
                   [
-                      'class' => 'app\libraries\log\LogstashFileTarget',
+                      'class' => 'Log\LogstashFileTarget',
                       'levels' => ['error', 'warning'],
                       'except' => ['yii\web\HttpException:404', 'yii\web\HttpException:403', 'yii\debug\Module::checkAccess',  'yii\web\HttpException:400', 'yii\base\UserException', 'yii\web\HttpException:401'],
                       'logFile' => '@runtime/logs/logstash.log',
@@ -26,8 +32,9 @@
     
   ?>
   ```
+```
 
-  ​
+  
 
 ## Logstatsh配置文件
 
@@ -42,6 +49,7 @@
       codec => "json"
     }
   }
+```
 
 
   output {
