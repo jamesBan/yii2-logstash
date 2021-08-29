@@ -58,8 +58,8 @@
                   index => "yii-web-%{+YYYY-MM-dd}"
                   document_type => "yii2"
                   workers => 1
-                  flush_size => 20000
-                  idle_flush_time => 10
+                  #flush_size => 20000
+                  #idle_flush_time => 10
              }
   	}
   }
